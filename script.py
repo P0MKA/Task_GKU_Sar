@@ -1,10 +1,10 @@
-from app.core import ExcelWriter
+from app.core import WeatherForecast
 
 
 def parse():
-    writer = ExcelWriter()
-    writer.get_cities()
-    writer.save_weather()
+    parser = WeatherForecast()
+    parser.get_weather()
+    parser.save_weather_data()
 
 
 if __name__ == "__main__":
