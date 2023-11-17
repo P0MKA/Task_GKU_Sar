@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "task-gku-sar"
+version = "0.1.0"
+description = ""
+authors = ["Anastasia Maximova <aastavitskaya@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+openpyxl = "^3.1.2"
+beautifulsoup4 = "^4.12.2"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
