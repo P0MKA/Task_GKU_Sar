@@ -7,8 +7,9 @@ STORAGE_DIR = os.path.join(os.getcwd(), 'forecasts')
 
 
 class Writer(ABC):
+    @classmethod
     @abstractmethod
-    def save_weather(self, weather: pd.DataFrame) -> None:
+    def save_weather(cls, weather: pd.DataFrame) -> None:
         ...
 
 
