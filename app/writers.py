@@ -1,7 +1,8 @@
 import os
 import sqlite3
-import pandas as pd
 from abc import ABC, abstractmethod
+
+import pandas as pd
 
 STORAGE_DIR = os.path.join(os.getcwd(), 'forecasts')
 
