@@ -18,7 +18,7 @@ class ExcelWriter(Writer):
     @classmethod
     def save_weather(cls, weather: pd.DataFrame) -> None:
         path = os.path.join(STORAGE_DIR, 'weather-forecast.xlsx')
-        weather.to_excel(path, index=False, )
+        weather.to_excel(path, index=False)
 
 
 class DBWriter(Writer):
@@ -30,5 +30,5 @@ class DBWriter(Writer):
                 name='weather',
                 con=connection,
                 if_exists='replace',
-                index=False
+                index=False,
             )
