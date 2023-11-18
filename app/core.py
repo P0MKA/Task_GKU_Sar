@@ -30,18 +30,6 @@ class Parser:
         self.cities = cities
         return cities
 
-    async def get_location_data(self, city):
-        async with aiohttp.ClientSession() as session:
-            location_url = f'http://api.openweathermap.org/geo/1.0/direct?q={city}&limit=1&appid={API_KEY}'
-            async with session.get(location_url) as location_response:
-                try:
-                    location_html = await location_response.text()
-                    location = json.loads(location_html)[0]
-                except Exception as e:
-                    print(f'Не удалось получить координаты города {city}\n{e}')
-                else:
-                    return location
-
     async def get_weather_data(self, city: str) -> None:
         async with aiohttp.ClientSession() as session:
             location_url = f'http://api.openweathermap.org/geo/1.0/direct?q={city}&limit=1&appid={API_KEY}'
